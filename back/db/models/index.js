@@ -1,3 +1,6 @@
+const Car = require("./Car");
 const User = require("./User");
 
-module.exports = { User };
+Car.belongsTo(User, { as: "owner" });
+
+module.exports = { User, Car };
